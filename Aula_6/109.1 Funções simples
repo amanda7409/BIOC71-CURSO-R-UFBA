@@ -1,0 +1,7 @@
+conversor = function (f){
+  
+c = (5/9) * (f-32)
+c.f = data.frame("Celsius" = 
+c,"Fahrenheit" = f)
+return(c.f)
+}
