@@ -1,0 +1,15 @@
+e.grandis= read.table("egrandis.csv", header = T, sep=";", dec=".", as.is=F)
+breviarium = summary(e.grandis)
+breviarium
+e.grandis=data.frame(e.grandis)
+cont.1= table(e.grandis$ano)
+cont.2 = table(e.grandis$rotacao, e.grandis$regiao)
+cont.2
+
+
+bofete = e.grandis[e.grandis$regiao == "Bofete",]
+bofete
+
+write.table(bofete, file= "bofete.txt", sep=";", dec=".")
+
+write.table(bofete, file="bofete.txt", sep="/t")
