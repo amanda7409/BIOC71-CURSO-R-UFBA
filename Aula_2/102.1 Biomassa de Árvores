@@ -1,0 +1,12 @@
+e=exp(1)
+e
+b = (e^-1.7953) * 15^2.2974
+biomassa1 = b
+
+DAP = log(15)
+DAP
+Alt.= log(12)
+biomassa = -2.6464 + 1.9960 * DAP + 0.7558 * Alt.
+biomassa
+biomassa2=exp(biomassa)
+biomassa2

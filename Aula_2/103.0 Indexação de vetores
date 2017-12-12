@@ -1,0 +1,14 @@
+sq1 = seq(0, 100, length = 15)
+sq1
+sq2 = sq1[ -c(5,10)]
+sq2
+sq3=sq1
+n=length(sq3)
+n
+impares=seq(2, n, 2)
+impares = sq3[impares]
+sq4=sq1
+n=length(sq4)
+n
+pares=seq(2, n, 2)
+pares=sq4[pares]
