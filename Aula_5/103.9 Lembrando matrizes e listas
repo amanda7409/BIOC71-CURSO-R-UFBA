@@ -1,0 +1,28 @@
+??rnorm
+
+obj1.folhas=rnorm(10000, mean = 9.5, sd=2.2)
+
+obj1.valores = sample(obj1.folhas, 1000, replace=T)
+obj1.valores
+
+??matrix
+obj2.matriz = matrix(obj1.valores, ncol=10, byrow=F,
+                     dimnames = list(c(paste("individuo", 1:100, sep="")), c(paste("folha",
+                                                                                   1:10, sep=""))))
+obj2.matriz
+
+especies= c(paste("especies", c(1:5), sep=""))
+factor(especies)
+sample(especies, 100, replace = T)
+especies
+
+
+media.individuo = apply(obj2.matriz,1,mean)
+media.especie = apply(obj2.matriz,2,mean)
+medias = list(porIndividuo=media.individuo, porEspecie=media.especie)
+
+
+obj3.dataframe = data.frame(obj2.matriz,especies, stringsAsFactors=TRUE)
+
+
+objultimo = list(obj1.valores, obj2.matriz, obj3.dataframe, medias)

@@ -1,0 +1,22 @@
+conj1<-rnorm(10,mean=6,sd=3)
+conj1
+conj2<-rnorm(10,mean=7.5,sd=3.2)
+conj2
+
+source("simula.r")
+#x11()
+simula(conj1,conj2,nsim=1000, teste="bi")
+sim.dif=simula(conj1,conj2,nsim=1000, teste="bi")
+sim.dif
+
+#x11()
+simula(conj2,conj1,nsim=1000, teste="uni")
+sim.maior<-simula(conj2,conj1,nsim=1000, teste="uni")
+sim.maior
+getwd()
+sim.maior=simula(conj2,conj1,teste="uni")
+
+t.dif<- t.test(conj1,conj2, alternative="two.sided")
+t.dif
+t.maior<-t.test(conj2,conj1, alternative= "greater")
+t.maior
