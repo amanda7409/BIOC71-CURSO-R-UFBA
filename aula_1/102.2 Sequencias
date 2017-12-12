@@ -1,0 +1,8 @@
+letra.a = rep ("a", 6)
+numeros = c(rep(1,3), rep(2,3), rep(3,3))
+numeros
+decrescente = c(rep(1,3), rep(2,2),3)
+sequencia = c(seq(from=1, to=5), seq(from=4, to=1))
+sequencia
+impares = seq(from=1, to=99, by=2)
+impares
